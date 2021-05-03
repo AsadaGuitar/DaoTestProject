@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<h2>入力画面</h2>
+
+<form action="output.html" th:action="@{/echo}"
+	th:object="${account}" method="POST">
+		<div>テキストを入力してください。</div>
+		<input type="text" name="text" th:field="*{id}"/><br/>
+		<input type="text" name="text" th:field="*{name}"/><br/>
+		<input type="text" name="text" th:field="*{age}"/><br/>
+		<input type="text" name="text"  th:field="*{gender}"/><br/>
+		<button type="submit">送信</button>
+</form>
+</body>
+</html>
